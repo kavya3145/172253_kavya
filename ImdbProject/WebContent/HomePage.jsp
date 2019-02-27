@@ -24,27 +24,24 @@
     <div id="navigation">
       <ul>
         <li><a class="active" href="#">HOME</a></li>
-       <li><a href="#">SignUp</a></li>
+        <% if(session.getAttribute("user")==null){
+        	%>
+        
+       <li><a href="Register.jsp">SignUp</a></li>
         <li><a href="Login.jsp">LOGIN</a></li>
-       
+        <% } else { %>
+         <li><b>WELCOME</b>&nbsp<b>${welcome}</b></li>
+       <li><a href="Logout">LOGOUT</a></li>
+      
+       <%} %>
         <li><a href="#">CONTACT</a></li>
       
       </ul>
     </div>
+    
     <div id="sub-navigation">
-      <ul>
-        <li><a href="#">SHOW ALL</a></li>
-        <li><a href="#">LATEST TRAILERS</a></li>
-        <li><a href="#">TOP RATED</a></li>
-        <li><a href="#">MOST COMMENTED</a></li>
-      </ul>
-      <div id="search">
-        <form action="#" method="get" accept-charset="utf-8">
-          <label for="search-field">SEARCH</label>
-          <input type="text" name="search field" value="Enter search here" id="search-field" class="blink search-field"  />
-          <input type="submit" value="GO!" class="search-button" />
-        </form>
-      </div>
+      
+      
     </div>
   </div>
   <div id="main">
@@ -75,7 +72,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">DHAMAAL</span></span> <a href="Dhamaal.html"><img src="css/images/dhamaal.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">DHAMAAL</span></span> <a href="Dhamaal.jsp"><img src="css/images/dhamaal.jpg" alt="" /></a> </div>
           <div class="rating">
           
 
@@ -86,7 +83,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">DARLING</span></span> <a href="Darling.html"><img src="css/images/darl.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">DARLING</span></span> <a href="Darling.jsp"><img src="css/images/darl.jpg" alt="" /></a> </div>
           <div class="rating">
          
 
@@ -97,7 +94,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">KRISH</span></span> <a href="Krish.html"><img src="css/images/krish.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">KRISH</span></span> <a href="Krish.jsp"><img src="css/images/krish.jpg" alt="" /></a> </div>
           <div class="rating">
           
             <p>RATING</p>
@@ -107,7 +104,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">KGF</span></span> <a href="Kgf.html"><img src="css/images/kgf.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">KGF</span></span> <a href="Kgf.jsp"><img src="css/images/kgf.jpg" alt="" /></a> </div>
           <div class="rating">
           
             <p>RATING</p>
@@ -124,7 +121,7 @@
           <p class="text-right"><a href="#">See all</a></p>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">DHOOM</span></span> <a href="Dhoom.html"><img src="css/images/dhoom.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">DHOOM</span></span> <a href="Dhoom.jsp"><img src="css/images/dhoom.jpg" alt="" /></a> </div>
           <div class="rating">
          
             <p>RATING</p>
@@ -134,7 +131,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">ANDHADHUN</span></span> <a href="Andhadhun.html"><img src="css/images/andha.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">ANDHADHUN</span></span> <a href="Andhadhun.jsp"><img src="css/images/andha.jpg" alt="" /></a> </div>
           <div class="rating">
             
             <p>RATING</p>
@@ -144,7 +141,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">ANNABELLE</span></span> <a href="Annabelle.html"><img src="css/images/anna.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">ANNABELLE</span></span> <a href="Annabelle.jsp"><img src="css/images/anna.jpg" alt="" /></a> </div>
           <div class="rating">
           
             <p>RATING</p>
@@ -154,7 +151,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">CONJURING</span></span> <a href="Conjuring.html"><img src="css/images/conj.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">CONJURING</span></span> <a href="Conjuring.jsp"><img src="css/images/conj.jpg" alt="" /></a> </div>
           <div class="rating">
             
             <p>RATING</p>
@@ -164,7 +161,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">RAHASYA</span></span> <a href="Rahasya.html"><img src="css/images/rahasya.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">RAHASYA</span></span> <a href="Rahasya.jsp"><img src="css/images/rahasya.jpg" alt="" /></a> </div>
           <div class="rating">
            
             <p>RATING</p>
@@ -174,7 +171,7 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href=""><img src="css/images/movie12.jpg" alt="" /></a> </div>
+          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href="Angels.jsp"><img src="css/images/angels.jpg" alt="" /></a> </div>
           <div class="rating">
             <p>RATING</p>
             <div class="stars">
@@ -183,6 +180,9 @@
             <span class="comments">12</span> </div>
         </div>
         <div class="cl">&nbsp;</div>
+      </div>
+      </div>
+      </div>
       </div>
 </body>
 </html>
