@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <script>
+            function reversePlusOne(array){
+             array.reverse();
+             array.unshift(1);
+                return array;
+            }
+            console.log(reversePlusOne([1,2]));
+            console.log(reversePlusOne([5,4,3,2]));
+
+            function arrayQuantityPlusOne(arrays){
+               var arrlength=arrays.length;
+                return arrlength+1;
+            }
+            console.log(arrayQuantityPlusOne([0,0,1,0,2,1]));
+            console.log(arrayQuantityPlusOne([42]));
+
+
+            var array1 = [1, 2, 3];
+            var array2 = [18, 24];
+
+            function plussesEverywhere(array) {
+            return array.join('+');
+            }
+
+            console.log(plussesEverywhere(array1));
+            console.log(plussesEverywhere(array2));
+        </script>
+	</body>
+</html>
